@@ -3,10 +3,11 @@ function generateRandomNum (num){
     return Math.floor(Math.random() * num);
 }
 
+//store data
 const answers = {
-    stocks: ["gamestop", "amc", "apple", "Tesla", "Amazon", "Facebook", "Roku", "Spotify", "Disney"],
-    buys: ["100 shares", "10 shares", "1 share", "3 shares", "1 call", "3 puts", "2 puts", "your entire portfolio"],
-    reason: ["trust me bro", "it's a good idea", "yolo", "you're a chad", "you'll make money", "you have extra buying power"]
+    stocks: ["Gamestop", "Amc", "Apple", "Tesla", "Amazon", "Facebook", "Roku", "Spotify", "Disney"],
+    buys: ["buy 100 shares", "buy 10 shares", "buy 1 share", "buy 3 shares", "buy 1 call", " buy 3 puts", "buy 2 puts", "yolo your entire account"],
+    reason: ["trust me bro", "it's a good idea", "you're a chad", "you'll make money", "fuck it", "daddy elon said so"]
 }
 
 //store questions in array
@@ -21,14 +22,14 @@ for (let prop in answers){
             questions.push(`You should invest in ${answers[prop][random]}`);
             break;
         case 'buys':
-            questions.push(`And should buy ${answers[prop][random]}`);
+            questions.push(`And should ${answers[prop][random]}`);
             break;
         case 'reason':
             questions.push(`Because ${answers[prop][random]}`);
             break;
     }
 }
-
+//format the array
 function format(x){
     let formatted = questions.join('\n');
     console.log(formatted);
